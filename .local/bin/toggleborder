@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd ~/.local/src/dwm &&
+cp confignormal.h config.h &&
+sudo make clean install && 
+kill -HUP "$(pgrep -u "$USER" "\bdwm$")"
